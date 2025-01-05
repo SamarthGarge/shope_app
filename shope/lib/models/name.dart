@@ -3,17 +3,17 @@ part 'name.g.dart';
 
 @JsonSerializable()
 class Name {
-  String title;
-  String first;
-  String last;
+  final String title;
+  final String first;
+  final String last;
 
-  Name({
-    required this.title,
-    required this.first,
-    required this.last,
-  });
+  Name({required this.title, required this.first, required this.last});
 
-  factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
-
-  Map<String, dynamic> toJson() => _$NameToJson(this);
+  factory Name.fromJson(Map<String, dynamic> json) {
+    return Name(
+      title: json['title'] as String,
+      first: json['first'] as String,
+      last: json['last'] as String,
+    );
+  }
 }

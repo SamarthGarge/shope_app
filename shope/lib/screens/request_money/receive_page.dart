@@ -22,7 +22,8 @@ class ReceivePaymentPage extends StatelessWidget {
           'Receive Payment',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -106,8 +107,7 @@ class ReceivePaymentPage extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text('Retry Again with new',
-                    style: TextStyle(
-                        color:Colors.white)),
+                    style: TextStyle(color: Colors.white)),
                 SizedBox(
                   width: 8.0,
                 ),
@@ -116,7 +116,7 @@ class ReceivePaymentPage extends StatelessWidget {
                     child: Text(
                       'QR code',
                       style: TextStyle(
-                        color:Colors.white,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                           decoration: TextDecoration.underline),
                     ))

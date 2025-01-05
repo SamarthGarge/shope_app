@@ -181,4 +181,3 @@ class RecommendedList extends StatelessWidget {
 //     );
 //   }
 // }
-

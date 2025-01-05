@@ -1,12 +1,11 @@
 name: shope
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
-  flutter: '>=3.27.0'
+  sdk: ^3.5.4
 
 dependencies:
   flutter:
@@ -22,13 +21,15 @@ dependencies:
   flutter_svg: ^2.0.2
   cupertino_icons: ^1.0.5
 
+  json_annotation: any
+  provider: ^6.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.12.0
   build_runner: ^2.0.4
   json_serializable: ^6.6.1
-  
+
 flutter_icons:
   android: "launcher_icon"
   ios: true

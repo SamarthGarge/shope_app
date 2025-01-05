@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shope/api_service.dart';
 import 'package:shope/models/user.dart';
 import 'package:shope/screens/send_money/quick_send_amount_page.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../app_properties.dart';
 
@@ -16,16 +17,33 @@ class SendPage extends StatefulWidget {
 class _SendPageState extends State<SendPage> {
   List<User> frequentUsers = [];
   List<User> users = [];
+  String error = '';
 
   getFrequentUsers() async {
-    var temp = await ApiService.getUsers(nrUsers: 5);
-    setState(() {
-      frequentUsers = temp;
-    });
+    try {
+      var temp = await ApiService.getUsers(nrUsers: 5);
+      if (kDebugMode) {
+        print('Frequent users fetched: ${temp.length}');
+      }
+      setState(() {
+        frequentUsers = temp;
+        error = '';
+      });
+    } catch (e) {
+      setState(() {
+        error = 'Failed to load frequent users: $e';
+      });
+      if (kDebugMode) {
+        print('Error getting frequent users: $e');
+      }
+    }
   }
 
   getUsers() async {
-    var temp = await ApiService.getUsers(nrUsers: 5);
+    var temp = await ApiService.getUsers(nrUsers: 15);
+    if (kDebugMode) {
+      print('frequent users: ${temp}');
+    }
     setState(() {
       users = temp;
     });
@@ -51,7 +69,8 @@ class _SendPageState extends State<SendPage> {
           'Send Amount',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SafeArea(
         child: Column(
@@ -59,9 +78,7 @@ class _SendPageState extends State<SendPage> {
           children: <Widget>[
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16.0),
-              decoration: BoxDecoration(
-                  border: Border(
-                      bottom: BorderSide(color: Colors.orange, width: 1))),
+              decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.orange, width: 1))),
               child: TextField(
                 cursorColor: darkGrey,
                 decoration: InputDecoration(
@@ -91,8 +108,7 @@ class _SendPageState extends State<SendPage> {
                 child: Center(
               child: Container(
                 height: 150,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                 child: Center(
                   child: frequentUsers.length == 0
                       ? CupertinoActivityIndicator()
@@ -100,45 +116,32 @@ class _SendPageState extends State<SendPage> {
                           scrollDirection: Axis.horizontal,
                           children: frequentUsers
                               .map((user) => InkWell(
-                                    onTap: () => Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (_) =>
-                                                QuickSendAmountPage(user))),
+                                    onTap: () =>
+                                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => QuickSendAmountPage(user))),
                                     child: Container(
                                         width: 100,
                                         height: 200,
-                                        margin: const EdgeInsets.only(
-                                            left: 8.0, right: 8.0),
+                                        margin: const EdgeInsets.only(left: 8.0, right: 8.0),
                                         decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(5))),
+                                            color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(5))),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
+                                          mainAxisAlignment: MainAxisAlignment.center,
                                           children: <Widget>[
                                             CircleAvatar(
                                               maxRadius: 24,
-                                              backgroundImage: NetworkImage(
-                                                  user.picture.thumbnail),
+                                              backgroundImage: NetworkImage(user.picture.thumbnail),
                                             ),
                                             Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      4.0, 16.0, 4.0, 0.0),
-                                              child: Text(
-                                                  user.name.first +
-                                                      ' ' +
-                                                      user.name.last,
+                                              padding: const EdgeInsets.fromLTRB(4.0, 16.0, 4.0, 0.0),
+                                              child: Text(user.name.first + ' ' + user.name.last,
                                                   textAlign: TextAlign.center,
                                                   style: TextStyle(
                                                     fontSize: 14.0,
                                                   )),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 8.0),
+                                              padding: const EdgeInsets.only(top: 8.0),
                                               child: Text(
                                                 user.phone,
                                                 textAlign: TextAlign.center,
@@ -158,83 +161,64 @@ class _SendPageState extends State<SendPage> {
               child: Text('Your Contacts'),
             ),
             Expanded(
-                flex: 2,
-                child: Center(
-                  child: users.length == 0
-                      ? CupertinoActivityIndicator()
-                      : Container(
-                          color: Colors.white,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 16.0, vertical: 8.0),
-                          child: ListView(
-                            children: users
-                                .map((user) => InkWell(
-                                      onTap: () => Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                              builder: (_) =>
-                                                  QuickSendAmountPage(user))),
-                                      child: Column(
-                                        children: <Widget>[
-                                          Row(
-                                            children: <Widget>[
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16.0),
-                                                child: CircleAvatar(
-                                                  maxRadius: 24,
-                                                  backgroundImage: NetworkImage(
-                                                      user.picture.thumbnail),
+              flex: 2,
+              child: Center(
+                child: users.length == 0
+                    ? CupertinoActivityIndicator()
+                    : Container(
+                        color: Colors.white,
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                        child: ListView(
+                          children: users
+                              .map((user) => InkWell(
+                                    onTap: () =>
+                                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => QuickSendAmountPage(user))),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Row(
+                                          children: <Widget>[
+                                            Padding(
+                                              padding: const EdgeInsets.only(right: 16.0),
+                                              child: CircleAvatar(
+                                                maxRadius: 24,
+                                                backgroundImage: NetworkImage(user.picture.thumbnail),
+                                              ),
+                                            ),
+                                            Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: <Widget>[
+                                                Padding(
+                                                  padding: const EdgeInsets.only(top: 16.0),
+                                                  child: Text(user.name.first + ' ' + user.name.last,
+                                                      style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold)),
                                                 ),
-                                              ),
-                                              Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 16.0),
-                                                    child: Text(
-                                                        user.name.first +
-                                                            ' ' +
-                                                            user.name.last,
-                                                        style: TextStyle(
-                                                            fontSize: 16.0,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .bold)),
+                                                Padding(
+                                                  padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
+                                                  child: Text(
+                                                    user.phone,
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 8.0,
-                                                            bottom: 16.0),
-                                                    child: Text(
-                                                      user.phone,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Spacer(),
-                                              Text(
-                                                'Send as a gift',
-                                                style:
-                                                    TextStyle(fontSize: 10.0),
-                                              )
-                                            ],
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 64.0),
-                                            child: Divider(),
-                                          )
-                                        ],
-                                      ),
-                                    ))
-                                .toList(),
-                          ),
+                                                ),
+                                              ],
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              'Send as a gift',
+                                              style: TextStyle(fontSize: 10.0),
+                                            )
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 64.0),
+                                          child: Divider(),
+                                        )
+                                      ],
+                                    ),
+                                  ))
+                              .toList(),
                         ),
-                )),
+                      ),
+              ),
+            ),
           ],
         ),
       ),

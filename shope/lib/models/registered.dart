@@ -3,16 +3,15 @@ part 'registered.g.dart';
 
 @JsonSerializable()
 class Registered {
-  String date;
-  int age;
+  final String date;
+  final int age;
 
-  Registered({
-    required this.date,
-    required this.age,
-  });
+  Registered({required this.date, required this.age});
 
-  factory Registered.fromJson(Map<String, dynamic> json) =>
-      _$RegisteredFromJson(json);
-
-  Map<String, dynamic> toJson() => _$RegisteredToJson(this);
+  factory Registered.fromJson(Map<String, dynamic> json) {
+    return Registered(
+      date: json['date'],
+      age: json['age'],
+    );
+  }
 }

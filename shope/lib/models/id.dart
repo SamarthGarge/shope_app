@@ -3,15 +3,15 @@ part 'id.g.dart';
 
 @JsonSerializable()
 class Id {
-  String name;
-  String value;
+  final String name;
+  final String value;
 
-  Id({
-    required this.name,
-    required this.value,
-  });
+  Id({required this.name, required this.value});
 
-  factory Id.fromJson(Map<String, dynamic> json) => _$IdFromJson(json);
-
-  Map<String, dynamic> toJson() => _$IdToJson(this);
+  factory Id.fromJson(Map<String, dynamic> json) {
+    return Id(
+      name: json['name'],
+      value: json['value'],
+    );
+  }
 }

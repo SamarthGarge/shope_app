@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       height: 200,
       width: 250,
       padding: EdgeInsets.all(16.0),

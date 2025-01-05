@@ -49,10 +49,8 @@ class QuickSendAmountPage extends StatelessWidget {
             IconButton(
               icon: Image.asset('assets/icons/cut_qr.png'),
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder: (_) =>
-                          ReceivePaymentPage(user)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => ReceivePaymentPage(user)));
               },
             )
           ],
@@ -61,7 +59,8 @@ class QuickSendAmountPage extends StatelessWidget {
             'Send Amount',
             style: TextStyle(color: darkGrey),
           ),
-          elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+          elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         body: LayoutBuilder(
             builder: (context, constraints) => SingleChildScrollView(

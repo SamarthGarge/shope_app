@@ -118,7 +118,9 @@ class _SearchPageState extends State<SearchPage>
                 if (value.isNotEmpty) {
                   List<Product> tempList = [];
                   products.forEach((product) {
-                    if (product.name.toLowerCase().contains(value.toLowerCase())) {
+                    if (product.name
+                        .toLowerCase()
+                        .contains(value.toLowerCase())) {
                       tempList.add(product);
                     }
                   });

@@ -3,18 +3,17 @@ part 'picture.g.dart';
 
 @JsonSerializable()
 class Picture {
-  String large;
-  String medium;
-  String thumbnail;
+  final String large;
+  final String medium;
+  final String thumbnail;
 
-  Picture({
-    required this.large,
-    required this.medium,
-    required this.thumbnail,
-  });
+  Picture({required this.large, required this.medium, required this.thumbnail});
 
-  factory Picture.fromJson(Map<String, dynamic> json) =>
-      _$PictureFromJson(json);
-
-  Map<String, dynamic> toJson() => _$PictureToJson(this);
+  factory Picture.fromJson(Map<String, dynamic> json) {
+    return Picture(
+      large: json['large'] as String,
+      medium: json['medium'] as String,
+      thumbnail: json['thumbnail'] as String,
+    );
+  }
 }
