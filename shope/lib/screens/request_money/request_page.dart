@@ -51,7 +51,8 @@ class _RequestPageState extends State<RequestPage> {
           'Request Amount',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SafeArea(
         child: Column(

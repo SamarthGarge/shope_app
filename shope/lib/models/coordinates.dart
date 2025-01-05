@@ -3,16 +3,15 @@ part 'coordinates.g.dart';
 
 @JsonSerializable()
 class Coordinates {
-  String latitude;
-  String longitude;
+  final String latitude;
+  final String longitude;
 
-  Coordinates({
-    required this.latitude,
-    required this.longitude,
-  });
+  Coordinates({required this.latitude, required this.longitude});
 
-  factory Coordinates.fromJson(Map<String, dynamic> json) =>
-      _$CoordinatesFromJson(json);
-
-  Map<String, dynamic> toJson() => _$CoordinatesToJson(this);
+  factory Coordinates.fromJson(Map<String, dynamic> json) {
+    return Coordinates(
+      latitude: json['latitude'],
+      longitude: json['longitude'],
+    );
+  }
 }

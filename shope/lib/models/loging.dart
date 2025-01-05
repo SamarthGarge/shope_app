@@ -3,13 +3,13 @@ part 'loging.g.dart';
 
 @JsonSerializable()
 class Login {
-  String uuid;
-  String username;
-  String password;
-  String salt;
-  String md5;
-  String sha1;
-  String sha256;
+  final String uuid;
+  final String username;
+  final String password;
+  final String salt;
+  final String md5;
+  final String sha1;
+  final String sha256;
 
   Login({
     required this.uuid,
@@ -21,7 +21,15 @@ class Login {
     required this.sha256,
   });
 
-  factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
-
-  Map<String, dynamic> toJson() => _$LoginToJson(this);
+  factory Login.fromJson(Map<String, dynamic> json) {
+    return Login(
+      uuid: json['uuid'],
+      username: json['username'],
+      password: json['password'],
+      salt: json['salt'],
+      md5: json['md5'],
+      sha1: json['sha1'],
+      sha256: json['sha256'],
+    );
+  }
 }

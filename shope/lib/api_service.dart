@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import 'models/user.dart';
@@ -60,29 +61,40 @@ import 'models/user.dart';
 // }
 // }
 class ApiService {
-  static String url = 'http://api.randomuser.me/';
+  static String baseUrl = 'https://randomuser.me/api/';
+
   static Future<List<User>> getUsers({int nrUsers = 1}) async {
     try {
-      final uri = Uri.parse('$url?results=$nrUsers');
-      final response = await http.get(
-        uri,
-        headers: {"Content-Type": "application/json"},
-      );
+      final uri = Uri.parse('$baseUrl?results=$nrUsers');
+      final response = await http.get(uri);
 
       if (response.statusCode == 200) {
-        // Decode the response body into a Map
-        Map<String, dynamic> data = json.decode(response.body); // Correct type
-        Iterable list =
-            data["results"]; // Access the 'results' key from the Map
-        List<User> users = list.map((l) => User.fromJson(l)).toList();
+        if (kDebugMode) {
+          print('Raw API Response: ${response.body}');
+        }
+        
+        Map<String, dynamic> data = json.decode(response.body);
+        List<dynamic> results = data['results'] as List;
+        
+        if (kDebugMode) {
+          print('Parsed Results: $results');
+        }
+
+        List<User> users = results.map((userData) => User.fromJson(userData)).toList();
+        
+        if (kDebugMode) {
+          print('Converted Users: $users');
+        }
+        
         return users;
       } else {
-        print('Error: ${response.body}');
-        return [];
+        throw Exception('Failed to load users: ${response.statusCode}');
       }
     } catch (e) {
-      print('Exception: $e');
-      return [];
+      if (kDebugMode) {
+        print('Error in getUsers: $e');
+      }
+      throw Exception('Failed to fetch users: $e');
     }
   }
 }

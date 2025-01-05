@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:shope/app_properties.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChangePasswordPage extends StatefulWidget {
@@ -51,7 +50,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
           'Settings',
           style: TextStyle(color: darkGrey),
         ),
-        elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+        elevation: 0,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: SafeArea(
           bottom: true,
@@ -68,7 +68,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 48.0,top:16.0),
+                            padding:
+                                const EdgeInsets.only(bottom: 48.0, top: 16.0),
                             child: Text(
                               'Change Password',
                               style: TextStyle(

@@ -78,7 +78,8 @@ class RequestAmountPage extends StatelessWidget {
             'Request Amount',
             style: TextStyle(color: darkGrey),
           ),
-          elevation: 0, systemOverlayStyle: SystemUiOverlayStyle.dark,
+          elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         body: LayoutBuilder(
           builder: (context, constraints) => SingleChildScrollView(
