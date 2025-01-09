@@ -23,6 +23,7 @@ dependencies:
 
   json_annotation: any
   provider: ^6.1.2
+  font_awesome_flutter: ^10.8.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

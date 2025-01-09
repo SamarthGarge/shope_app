@@ -1,6 +1,6 @@
 import 'package:shope/app_properties.dart';
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'forgot_password_page.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -133,12 +133,12 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             IconButton(
-              icon: Icon(Icons.find_replace),
+              icon: FaIcon(FontAwesomeIcons.google),
               onPressed: () {},
               color: Colors.white,
             ),
             IconButton(
-                icon: Icon(Icons.find_replace),
+                icon: FaIcon(FontAwesomeIcons.facebook),
                 onPressed: () {},
                 color: Colors.white),
           ],
