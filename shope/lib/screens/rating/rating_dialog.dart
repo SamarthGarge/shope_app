@@ -28,7 +28,7 @@ class RatingDialog extends StatelessWidget {
             ],
             borderRadius: BorderRadius.circular(9.0)),
         child: Center(
-          child: Text("Pay Now",
+          child: Text("Rate Now",
               style: const TextStyle(
                   color: const Color(0xfffefefe),
                   fontWeight: FontWeight.w600,

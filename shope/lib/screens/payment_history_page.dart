@@ -11,9 +11,9 @@ class PaymentHistoryPage extends StatefulWidget {
 
 class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
   List<User> users = [];
-  List<String> dates = ['24th June 2019', '29th June 2019', '2nd July 2019'];
+  List<String> dates = ['24th June 2025', '29th June 2025', '2nd July 2025'];
 
-  String selectedMonth = 'June 2019';
+  String selectedMonth = 'June 2025';
 
   // Integrate your API SERVICE here
   // You only need to define where are your data come from
@@ -27,7 +27,6 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _getUsers();
     super.initState();
   }
@@ -60,18 +59,18 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton(
                             items: <String>[
-                              'January 2019',
-                              'February 2019',
-                              'March 2019',
-                              'April 2019',
-                              'May 2019',
-                              'June 2019',
-                              'July 2019',
-                              'August 2019',
-                              'September 2019',
-                              'Octomber 2019',
-                              'November 2019',
-                              'December 2019'
+                              'January 2025',
+                              'February 2025',
+                              'March 2025',
+                              'April 2025',
+                              'May 2025',
+                              'June 2025',
+                              'July 2025',
+                              'August 2025',
+                              'September 2025',
+                              'Octomber 2025',
+                              'November 2025',
+                              'December 2025'
                             ].map((val) {
                               return DropdownMenuItem<String>(
                                 value: val,
@@ -84,7 +83,6 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
                             }).toList(),
                             onChanged: (val) {
                               setState(() {
-                                // TODO flutter 2 migration
                                 selectedMonth = val.toString();
                               });
                             },

@@ -1,7 +1,6 @@
 import 'package:shope/app_properties.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
 import 'package:shope/screens/rating/rating_dialog.dart';
 
 class RatingPage extends StatefulWidget {

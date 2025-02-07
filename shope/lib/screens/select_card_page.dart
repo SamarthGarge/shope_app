@@ -110,7 +110,7 @@ class SelectCardPage extends StatelessWidget {
                                     AssetImage('assets/background.jpg'),
                               ),
                               SizedBox(width: 8.0),
-                              Text('Kinder Joy',
+                              Text('Samarth Garge',
                                   style: TextStyle(
                                     color: Colors.grey,
                                   ))
@@ -119,7 +119,7 @@ class SelectCardPage extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: <Widget>[
-                              Text('Roberto',
+                              Text('Samarth',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 10.0)),

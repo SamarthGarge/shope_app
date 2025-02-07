@@ -17,7 +17,7 @@ class _WelcomeBackPageState extends State<WelcomeBackPage> {
   @override
   Widget build(BuildContext context) {
     Widget welcomeBack = Text(
-      'Welcome Back Roberto,',
+      'Welcome Back Samarth,',
       style: TextStyle(
           color: Colors.white,
           fontSize: 34.0,

@@ -209,14 +209,14 @@ class _TrackingPageState extends State<TrackingPage> {
           // Background image with color filter for opacity
           Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/Group444.png'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  Colors.white,
-                  BlendMode.dstATop,
-                ),
-              ),
+              // image: DecorationImage(
+              //   image: AssetImage('assets/Group 444.png'),
+              //   fit: BoxFit.cover,
+              //   colorFilter: ColorFilter.mode(
+              //     Colors.white,
+              //     BlendMode.dstATop,
+              //   ),
+              // ),
             ),
           ),
           // Content overlay

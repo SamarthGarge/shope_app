@@ -166,7 +166,6 @@ class _CheckOutPageState extends State<CheckOutPage> {
 class Scroll extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
 
     LinearGradient grT = LinearGradient(
         colors: [Colors.transparent, Colors.black26],
@@ -194,7 +193,6 @@ class Scroll extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
     return false;
   }
 }

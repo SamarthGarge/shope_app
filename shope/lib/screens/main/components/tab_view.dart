@@ -9,7 +9,7 @@ class TabView extends StatelessWidget {
       Color(0xffFCE183),
       Color(0xffF68D7F),
       'Gadgets',
-      'assets/jeans_5.png',
+      'assets/headphones_4.png',
     ),
     Category(
       Color(0xffF749A2),
@@ -21,25 +21,25 @@ class TabView extends StatelessWidget {
       Color(0xff00E9DA),
       Color(0xff5189EA),
       'Fashion',
-      'assets/jeans_5.png',
+      'assets/jeans_9.png',
     ),
     Category(
       Color(0xffAF2D68),
       Color(0xff632376),
       'Home',
-      'assets/jeans_5.png',
+      'assets/bag_5.png',
     ),
     Category(
       Color(0xff36E892),
       Color(0xff33B2B9),
       'Beauty',
-      'assets/jeans_5.png',
+      'assets/ring_8.png',
     ),
     Category(
       Color(0xffF123C4),
       Color(0xff668CEA),
       'Appliances',
-      'assets/jeans_5.png',
+      'assets/bag_9.png',
     ),
   ];
 

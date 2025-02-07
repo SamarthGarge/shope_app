@@ -59,9 +59,9 @@ class _SplashScreenState extends State<SplashScreen>
                     text: TextSpan(
                         style: TextStyle(color: Colors.black),
                         children: [
-                          TextSpan(text: 'Powered by '),
+                          TextSpan(text: ''),
                           TextSpan(
-                              text: 'int2.io',
+                              text: '',
                               style: TextStyle(fontWeight: FontWeight.bold))
                         ]),
                   ),

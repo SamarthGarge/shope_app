@@ -286,7 +286,7 @@ class _PaymentPageState extends State<PaymentPage> {
                                     controller: cvc,
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
-                                        hintText: 'CVC'),
+                                        hintText: 'CVV'),
                                     onChanged: (val) {
                                       setState(() {});
                                     },
