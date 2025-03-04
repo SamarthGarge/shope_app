@@ -43,7 +43,7 @@ class ReceivePaymentPage extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: Image.asset('assets/icons/QR_code.png'),
                           ),
-                          Text('asdfghjklqwertyuioxcvbnm,'),
+                          Text('QR CODE'),
                           Padding(
                             padding: const EdgeInsets.all(32.0),
                             child: Row(
@@ -51,7 +51,7 @@ class ReceivePaymentPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  '\$',
+                                  '\₹',
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,

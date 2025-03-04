@@ -127,7 +127,7 @@ class _RegisterPageState extends State<RegisterPage> {
         Text(
           'You can sign in with',
           style: TextStyle(
-              fontSize: 12.0, fontStyle: FontStyle.italic, color: Colors.white),
+              fontSize: 15.0, fontStyle: FontStyle.normal, color: Colors.white),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

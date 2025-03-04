@@ -10,7 +10,7 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.transparent,
+      color: Colors.white,
       elevation: 0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

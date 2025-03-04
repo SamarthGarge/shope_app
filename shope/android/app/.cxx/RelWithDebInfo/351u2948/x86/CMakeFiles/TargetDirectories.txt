@@ -1,0 +1,2 @@
+C:/Users/Samarth/Documents/GitHub/shope_app/shope/android/app/.cxx/RelWithDebInfo/351u2948/x86/CMakeFiles/edit_cache.dir
+C:/Users/Samarth/Documents/GitHub/shope_app/shope/android/app/.cxx/RelWithDebInfo/351u2948/x86/CMakeFiles/rebuild_cache.dir

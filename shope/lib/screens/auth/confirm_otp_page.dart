@@ -497,9 +497,9 @@ class _ConfirmOtpPageState extends State<ConfirmOtpPage> {
         Text(
           "Resend again after ",
           style: TextStyle(
-            fontStyle: FontStyle.italic,
+            fontStyle: FontStyle.normal,
             color: Color.fromRGBO(255, 255, 255, 0.5),
-            fontSize: 14.0,
+            fontSize: 15.0,
           ),
         ),
         InkWell(

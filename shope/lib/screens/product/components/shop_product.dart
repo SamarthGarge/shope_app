@@ -33,7 +33,7 @@ class ShopProduct extends StatelessWidget {
               ),
             ),
             Text(
-              '\$${product.price}',
+              '\₹${product.price}',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: darkGrey, fontWeight: FontWeight.bold, fontSize: 18.0),
@@ -54,40 +54,42 @@ class ShopProductDisplay extends StatelessWidget {
     return SizedBox(
       height: 150,
       width: 200,
-      child: Stack(children: <Widget>[
-        Positioned(
-          left: 25,
-          child: SizedBox(
-            height: 150,
-            width: 150,
-            child: Transform.scale(
-              scale: 1.2,
-              // child: Image.asset('assets/bottom_yellow.png'),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+            left: 5,
+            child: SizedBox(
+              height: 150,
+              width: 150,
+              child: Transform.scale(
+                scale: 1.2,
+                child: Image.asset('assets/bottom_yellow.png'),
+              ),
             ),
           ),
-        ),
-        Positioned(
-          left: 50,
-          top: 5,
-          child: SizedBox(
-              height: 80,
-              width: 80,
-              child: Image.asset(
-                '${product.image}',
-                fit: BoxFit.contain,
-              )),
-        ),
-        Positioned(
-          right: 30,
-          bottom: 25,
-          child: Align(
-            child: IconButton(
-              icon: Image.asset('assets/red_clear.png'),
-              onPressed: onPressed,
+          Positioned(
+            left: 50,
+            top: 5,
+            child: SizedBox(
+                height: 80,
+                width: 80,
+                child: Image.asset(
+                  '${product.image}',
+                  fit: BoxFit.contain,
+                )),
+          ),
+          Positioned(
+            right: 30,
+            bottom: 25,
+            child: Align(
+              child: IconButton(
+                icon: Image.asset('assets/red_clear.png'),
+                onPressed: onPressed,
+              ),
             ),
           ),
-        )
-      ]),
+        ],
+      ),
     );
   }
 }

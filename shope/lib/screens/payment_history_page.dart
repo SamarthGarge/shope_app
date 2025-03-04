@@ -11,9 +11,9 @@ class PaymentHistoryPage extends StatefulWidget {
 
 class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
   List<User> users = [];
-  List<String> dates = ['24th June 2025', '29th June 2025', '2nd July 2025'];
+  List<String> dates = ['24th June 2024', '29th June 2024', '2nd July 2024'];
 
-  String selectedMonth = 'June 2025';
+  String selectedMonth = 'June 2024';
 
   // Integrate your API SERVICE here
   // You only need to define where are your data come from
@@ -184,12 +184,12 @@ class _PaymentHistoryPageState extends State<PaymentHistoryPage> {
                                                                             CrossAxisAlignment.start,
                                                                         children: <Widget>[
                                                                           Text(
-                                                                            '\$ ',
+                                                                            '\₹ ',
                                                                             style:
                                                                                 TextStyle(fontWeight: FontWeight.bold, fontSize: 10.0),
                                                                           ),
                                                                           Text(
-                                                                            '90.00',
+                                                                            '900',
                                                                             style:
                                                                                 TextStyle(fontWeight: FontWeight.bold),
                                                                           ),

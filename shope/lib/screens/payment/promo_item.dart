@@ -53,7 +53,7 @@ class PromoItem extends StatelessWidget {
                                     children: <Widget>[
                                       ColorOption(Colors.red),
                                       Text(
-                                        '\$58.24',
+                                        '\₹5888.24',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             color: darkGrey,

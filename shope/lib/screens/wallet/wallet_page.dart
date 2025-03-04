@@ -92,7 +92,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          '\$',
+                          '\₹',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -100,7 +100,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                           ),
                         ),
                         SizedBox(width: 8.0),
-                        Text('54.24', style: TextStyle(color: Colors.black, fontSize: 48, fontWeight: FontWeight.bold))
+                        Text('5424', style: TextStyle(color: Colors.black, fontSize: 48, fontWeight: FontWeight.bold))
                       ],
                     ),
                   ),
@@ -154,7 +154,7 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                                       width: 110,
                                       height: 110,
                                       child: Center(
-                                          child: Text('\$',
+                                          child: Text('\₹',
                                               style: TextStyle(color: Color.fromRGBO(255, 255, 255, 0.5), fontSize: 32)))),
                                 )))
                       ],

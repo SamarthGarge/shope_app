@@ -1,4 +1,3 @@
-import 'package:shope/app_properties.dart';
 import 'package:shope/screens/auth/welcome_back_page.dart';
 import 'package:flutter/material.dart';
 
@@ -37,37 +36,34 @@ class _SplashScreenState extends State<SplashScreen>
         .pushReplacement(MaterialPageRoute(builder: (_) => WelcomeBackPage()));
   }
 
+  @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/background.jpg'), fit: BoxFit.cover)),
-      child: Container(
-        decoration: BoxDecoration(color: transparentYellow),
-        child: SafeArea(
-          child: new Scaffold(
-            body: Column(
-              children: <Widget>[
-                Expanded(
-                  child: Opacity(
-                      opacity: opacity.value,
-                      child: new Image.asset('assets/logo.png')),
+      color: Colors.white,
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Column(
+            children: <Widget>[
+              Expanded(
+                child: Opacity(
+                    opacity: opacity.value,
+                    child: Image.asset('assets/logo.png')),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: RichText(
+                  text: TextSpan(
+                      style: TextStyle(color: Colors.black),
+                      children: [
+                        TextSpan(text: ''),
+                        TextSpan(
+                            text: '',
+                            style: TextStyle(fontWeight: FontWeight.bold))
+                      ]),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RichText(
-                    text: TextSpan(
-                        style: TextStyle(color: Colors.black),
-                        children: [
-                          TextSpan(text: ''),
-                          TextSpan(
-                              text: '',
-                              style: TextStyle(fontWeight: FontWeight.bold))
-                        ]),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),

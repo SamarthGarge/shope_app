@@ -144,7 +144,7 @@ class RequestAmountPage extends StatelessWidget {
                                       color: Colors.white, fontSize: 48),
                                   textAlign: TextAlign.center,
                                   decoration: InputDecoration(
-                                    hintText: '\$ 00.00',
+                                    hintText: '\₹ 00.00',
                                     hintStyle: TextStyle(
                                         color: Colors.white30, fontSize: 48),
                                     enabledBorder: const UnderlineInputBorder(
@@ -154,7 +154,7 @@ class RequestAmountPage extends StatelessWidget {
                                   ),
                                 ),
                               )),
-                          Text('You can only send \$54.24',
+                          Text('You can only send \₹5424',
                               style: TextStyle(color: Colors.white54)),
                         ],
                       ),
@@ -177,13 +177,13 @@ class RequestAmountPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                '\$ ',
+                                '\₹ ',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 10.0),
                               ),
                               Text(
-                                '90.00',
+                                '900',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -200,13 +200,13 @@ class RequestAmountPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                '\$ ',
+                                '\₹ ',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 10.0),
                               ),
                               Text(
-                                '90.00',
+                                '900',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -223,13 +223,13 @@ class RequestAmountPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                '\$ ',
+                                '\₹ ',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 10.0),
                               ),
                               Text(
-                                '90.00',
+                                '900',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -246,13 +246,13 @@ class RequestAmountPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                '\$ ',
+                                '\₹ ',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 10.0),
                               ),
                               Text(
-                                '90.00',
+                                '900',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -269,13 +269,13 @@ class RequestAmountPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                '\$ ',
+                                '\₹ ',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 10.0),
                               ),
                               Text(
-                                '90.00',
+                                '900',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],

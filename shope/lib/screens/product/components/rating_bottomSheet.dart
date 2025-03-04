@@ -129,7 +129,7 @@ class _RatingBottomSheetState extends State<RatingBottomSheet> {
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
-                                      'Billy Holand',
+                                      'Rishabh Jain',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold),
                                     ),

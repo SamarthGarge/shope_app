@@ -166,13 +166,13 @@ class SelectCardPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    '\$ ',
+                                    '\₹ ',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 10.0),
                                   ),
                                   Text(
-                                    '90.00',
+                                    '900',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0),

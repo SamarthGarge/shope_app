@@ -67,7 +67,7 @@ class NotificationsPage extends StatelessWidget {
                                             text: ' Requested for ',
                                           ),
                                           TextSpan(
-                                            text: '\$45.25',
+                                            text: '\₹455',
                                             style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -155,7 +155,7 @@ class NotificationsPage extends StatelessWidget {
                                             text: ' Send You ',
                                           ),
                                           TextSpan(
-                                            text: '\$45.25',
+                                            text: '\₹455',
                                             style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),

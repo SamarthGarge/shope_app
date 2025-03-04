@@ -6,21 +6,21 @@ import 'package:flutter/material.dart';
 
 class RecommendedList extends StatelessWidget {
   final List<Product> products = [
-    Product('assets/bag_1.png', 'Bag', 'Beautiful bag', 2.33),
+    Product('assets/bag_1.png', 'Bag', 'Beautiful bag', 233),
     Product('assets/cap_5.png', 'Cap', 'Cap with beautiful design', 10),
     Product('assets/jeans_1.png', 'Jeans', 'Jeans for you', 20),
     Product('assets/womanshoe_3.png', 'Woman Shoes',
         'Shoes with special discount', 30),
     Product('assets/bag_10.png', 'Bag Express', 'Bag for your shops', 40),
-    Product('assets/jeans_3.png', 'Jeans', 'Beautiful Jeans', 102.33),
-    Product('assets/ring_1.png', 'Silver Ring', 'Description', 52.33),
-    Product('assets/shoeman_7.png', 'Shoes', 'Description', 62.33),
-    Product('assets/headphone_9.png', 'Headphones', 'Description', 72.33),
-    Product('assets/headphone_10.png', 'Headphones', 'Description', 72.33),
-    Product('assets/jeans_2.png', 'Jeans', 'Description', 72.33),
-    Product('assets/ring_2.png', 'Silver Ring', 'Description', 72.33),
-    Product('assets/shoeman_8.png', 'Shoes', 'Description', 72.33),
-    Product('assets/womanshoe_5.png', 'Woman Shoes', 'Shoes', 56.32),
+    Product('assets/jeans_3.png', 'Jeans', 'Beautiful Jeans', 1023),
+    Product('assets/ring_1.png', 'Silver Ring', 'Description', 533),
+    Product('assets/shoeman_7.png', 'Shoes', 'Description', 623),
+    Product('assets/headphone_9.png', 'Headphones', 'Description', 733),
+    Product('assets/headphone_10.png', 'Headphones', 'Description', 73),
+    Product('assets/jeans_2.png', 'Jeans', 'Description', 733),
+    Product('assets/ring_2.png', 'Silver Ring', 'Description', 723),
+    Product('assets/shoeman_8.png', 'Shoes', 'Description', 723),
+    Product('assets/womanshoe_5.png', 'Woman Shoes', 'Shoes', 562),
     
   ];
 

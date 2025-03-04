@@ -36,7 +36,7 @@ class ProductDisplay extends StatelessWidget {
                   child: RichText(
                       text: TextSpan(children: [
                     TextSpan(
-                        text: '\$ ${product.price}',
+                        text: '\₹ ${product.price}',
                         style: const TextStyle(
                             color: const Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w400,

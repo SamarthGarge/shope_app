@@ -130,7 +130,7 @@ class QuickSendAmountPage extends StatelessWidget {
                                               fontSize: 48),
                                           textAlign: TextAlign.center,
                                           decoration: InputDecoration(
-                                            hintText: '\$ 00.00',
+                                            hintText: '\₹ 00.00',
                                             hintStyle: TextStyle(
                                                 color: Colors.white30,
                                                 fontSize: 48),
@@ -142,7 +142,7 @@ class QuickSendAmountPage extends StatelessWidget {
                                           ),
                                         ),
                                       )),
-                                  Text('You can only send \$54.24',
+                                  Text('You can only send \₹5424',
                                       style: TextStyle(color: Colors.white54)),
                                 ],
                               ),

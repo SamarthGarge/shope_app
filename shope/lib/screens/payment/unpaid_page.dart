@@ -107,7 +107,7 @@ class _UnpaidPageState extends State<UnpaidPage> {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     trailing: Text(
-                                      '\$ 66.93',
+                                      '\₹ 66.93',
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),

@@ -165,7 +165,7 @@ class _RatingPageState extends State<RatingPage> {
                                                       .spaceBetween,
                                               children: <Widget>[
                                                 Text(
-                                                  'Billy Holand',
+                                                  'Rishabh Jain',
                                                   style: TextStyle(
                                                       fontWeight:
                                                           FontWeight.bold),

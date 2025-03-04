@@ -334,9 +334,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           Text(
             "Didn't receive the OTP? ",
             style: TextStyle(
-              fontStyle: FontStyle.italic,
+              fontStyle: FontStyle.normal,
               color: Color.fromRGBO(255, 255, 255, 0.5),
-              fontSize: 14.0,
+              fontSize: 15.0,
             ),
           ),
           InkWell(
@@ -346,7 +346,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 14.0,
+                fontSize: 15.0,
               ),
             ),
           ),
