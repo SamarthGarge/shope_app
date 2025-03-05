@@ -3,7 +3,6 @@ import 'package:shope/models/product.dart';
 import 'package:shope/screens/product/components/color_list.dart';
 import 'package:shope/screens/product/components/shop_product.dart';
 import 'package:flutter/material.dart';
-import 'package:numberpicker/numberpicker.dart';
 
 class ShopItemList extends StatefulWidget {
   final Product product;
@@ -79,32 +78,6 @@ class _ShopItemListState extends State<ShopItemList> {
                       ],
                     ),
                   ),
-                  // Theme(
-                  //   data: ThemeData(
-                  //       hintColor: Colors.black,
-                  //       textTheme: TextTheme(
-                  //         titleLarge: TextStyle(
-                  //             fontFamily: 'Montserrat',
-                  //             fontSize: 14,
-                  //             color: Colors.black,
-                  //             fontWeight: FontWeight.bold),
-                  //         bodyLarge: TextStyle(
-                  //           fontFamily: 'Montserrat',
-                  //           fontSize: 12,
-                  //           color: Colors.grey[400],
-                  //         ),
-                  //       )),
-                  //   child: NumberPicker(
-                  //     value: quantity,
-                  //     minValue: 1,
-                  //     maxValue: 10,
-                  //     onChanged: (value) {
-                  //       setState(() {
-                  //         quantity = value;
-                  //       });
-                  //     },
-                  //   ),
-                  // ),
                 ],
               ),
             ),
